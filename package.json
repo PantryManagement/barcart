@@ -1,0 +1,46 @@
+{
+  "name": "Barcart",
+  "version": "6.6.6",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "concurrently \"NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PantryManagement/main.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PantryManagement/main/issues"
+  },
+  "homepage": "https://github.com/PantryManagement/main#readme",
+  "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "express": "^4.18.1",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
