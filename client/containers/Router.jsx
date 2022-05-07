@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Navbar from "../components/Navbar.jsx";
 import ShoppingListContainer from "./ShoppingListContainer.jsx";
@@ -10,10 +10,14 @@ import IngredientContainer from "./IngredientContainer.jsx";
 export default function Router() {
   return (
     <div className="router">
-      <Navbar />
-      <ShoppingListContainer />
-      <CocktailContainer />
-      <IngredientContainer />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='listPlaceholder' element={<ShoppingListContainer />} />
+          <Route path='cocktailsPlaceholder' element={<CocktailContainer />} />
+          <Route path='ingredientPlaceholder' element={<IngredientContainer />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

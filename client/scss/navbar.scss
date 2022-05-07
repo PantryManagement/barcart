@@ -1,1 +1,44 @@
 @import '_variables';
+
+.navbar-container {
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  background-color: $primary;
+  justify-content: space-between;
+  align-items: center;
+  // Why are the nav links not in one line?
+  .app-title {
+    font-size: 2em;
+    padding-left: 1em;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: darken(white, 10)
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1em;
+
+    .nav-item {
+      list-style: none;
+      display: inline;
+      padding-right: 1em;
+      
+
+      .nav-link {
+        text-decoration: none;
+        color: white;
+        
+        &:hover {
+          color: darken(white, 10)
+        }
+
+      }
+    }
+  }
+}
