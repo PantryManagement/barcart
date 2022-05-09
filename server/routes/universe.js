@@ -3,9 +3,7 @@ const router = express.Router();
 
 const universeController = require('../controllers/universeController');
 
-router.get('/', universeController.getDrinks, (req, res) => {
-  // do something with response
-})
+router.get('/', universeController.getDrinks, universeController.getIngredients, (req, res) => res.status(200).json(res.locals));
 
 
 module.exports = router;
