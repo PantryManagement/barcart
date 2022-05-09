@@ -12,7 +12,7 @@ export default function Navbar() {
           <Link to='listPlaceholder' className='nav-link'>Shopping List</Link>
         </li>
         <li className='nav-item'>
-          <Link to='cocktailsPlaceholder' className='nav-link'>Cocktails</Link>
+          <Link to='cocktails' className='nav-link'>Cocktails</Link>
         </li>
         <li className='nav-item'>
           <Link to='ingredientPlaceholder' className='nav-link'>User Bar</Link>

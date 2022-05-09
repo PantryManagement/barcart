@@ -2,12 +2,15 @@
 
 .navbar-container {
   display: flex;
-  height: 10vh;
+  height: 7vh;
   width: 100vw;
   background-color: $primary;
   justify-content: space-between;
   align-items: center;
-  // Why are the nav links not in one line?
+  position: fixed;
+  border-bottom: 1px solid black;
+  z-index: 2;
+  filter: drop-shadow(0 .25em .5rem darken(darkgrey, 20));
   .app-title {
     font-size: 2em;
     padding-left: 1em;
@@ -35,7 +38,7 @@
         color: white;
         
         &:hover {
-          color: darken(white, 10)
+          color: $secondary
         }
 
       }

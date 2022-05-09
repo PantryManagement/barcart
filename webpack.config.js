@@ -24,7 +24,7 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
     proxy: {
-      '/api': {
+      '/api/**': {
         target: 'http://localhost:3000/',
       },
     },

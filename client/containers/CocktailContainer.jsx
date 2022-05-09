@@ -7,30 +7,18 @@ export default function CocktailContainer() {
   const [cocktailList, setCocktailList] = useState([])
   useEffect(() => { 
     
-    const getCocktailData = async () => {
-      console.log('is this thing on')
-      try {
-      const data = await fetch('/universe/drinks');
+    const getCocktailData = async() =>{
+      const data = await fetch('api/universe/drinks')
       const drinks = await data.json();
-      console.log(data)
-      return drinks;
-      }
-      catch (err) {
-        console.log(err)
-      }
+      setCocktailList([...drinks.drinks])
     }
-    
-    console.log('inside use effect')
-    console.log(getCocktailData())
-    // setCocktailList((prevState) => {
-    //   console.log(prevState)
-    // })
+    getCocktailData().catch(console.error)
   }, []);
 
   
   return (
     <div className='cocktail-container'>
-      {/* <CocktailCardDeck cocktailList={cocktailList} /> */}
+      <CocktailCardDeck cocktailList={cocktailList} />
     </div>
   )
 }
