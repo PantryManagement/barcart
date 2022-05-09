@@ -20,7 +20,7 @@ app.get('/build.js', (req, res) => {
 });
 
 
-// app.use('/drinks', drinksRouter);
+
 app.get('/favicon.ico', (req, res) => (
   res.status(200)
 ));
