@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 // });
 
 app.use('/universe', universeRouter);
-app.use('/drinks', drinksRouter);
+// app.use('/drinks', drinksRouter);
 
 
 app.listen(PORT, () => {

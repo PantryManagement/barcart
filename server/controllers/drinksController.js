@@ -1,7 +1,7 @@
 const db = require('../models/drinkModel');
 const drinksController = {};
 
-drinksController.calculateDrinks = (req, res, next) => {
+drinksController.getDrinks = (req, res, next) => {
 
   
 

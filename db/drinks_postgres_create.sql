@@ -50,6 +50,8 @@ INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES
 INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES (23, 'salt', 'spice', 30, 'teaspoon');
 INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES (24, 'black peppr', 'spice', 30, 'teaspoon');
 INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES (25, 'orange juice', 'juice', 20, 'oz');
+INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES (26, 'bitters', 'sauce', 4, 'oz');
+INSERT INTO public.ingredients (_id, ingredient, family, in_stock, units) VALUES (27, 'sugar', 'spice', 96, 'teaspoon');
 
 
 INSERT INTO public.drinks (_id, drink, flavor, glassware) VALUES (1, 'bloody mary', 'savory', 'glass');
@@ -68,7 +70,15 @@ INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (2, 6, 8, 4);
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (3, 6, 10, 1);
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (4, 6, 15, 1);
+
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (5, 7, 6, 1.5);
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (6, 7, 12, 1);
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (7, 7, 10, 3);
 INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (8, 7, 16, 2);
+
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (9, 4, 2, 1.5);
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (10, 4, 14, 1);
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (11, 4, 17, 1);
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (12, 4, 12, 1);
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (13, 4, 26, 0.1);
+INSERT INTO public.ingredients_in_drinks (_id, drink_id, ingredient_id, quantity) VALUES (14, 4, 27, 1);
