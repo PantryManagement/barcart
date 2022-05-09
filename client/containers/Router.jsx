@@ -14,7 +14,7 @@ export default function Router() {
         <Navbar />
         <Routes>
           <Route path='listPlaceholder' element={<ShoppingListContainer />} />
-          <Route path='cocktailsPlaceholder' element={<CocktailContainer />} />
+          <Route path='cocktails' element={<CocktailContainer />} />
           <Route path='ingredientPlaceholder' element={<IngredientContainer />} />
         </Routes>
       </BrowserRouter>
