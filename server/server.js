@@ -5,6 +5,7 @@ const path = require('path');
 const PORT = 3000;
 
 const universeRouter = require('./routes/universe');
+const drinksRouter = require('./routes/drinks');
 
 app.use(express.json());
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 // });
 
 app.use('/universe', universeRouter);
+app.use('/drinks', drinksRouter);
 
 
 app.listen(PORT, () => {
