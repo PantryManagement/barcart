@@ -19,6 +19,8 @@ app.get('/build.js', (req, res) => {
   return res.sendFile(path.resolve(__dirname, '../build/build.js'));
 });
 
+
+// app.use('/drinks', drinksRouter);
 app.get('/favicon.ico', (req, res) => (
   res.status(200)
 ));
