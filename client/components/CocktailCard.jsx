@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../scss/cocktailCard.scss'
+import styles from '../scss/cocktailcard.scss'
 
 export default function CocktailCard(props) {
     

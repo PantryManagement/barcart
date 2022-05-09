@@ -13,7 +13,7 @@ app.use(express.json());
 // app.use(express.static(path.resolve(__dirname)));
 
 app.get('/', (req, res) => {
-  console.log('here in sendfile html')
+
   return res.sendFile(path.resolve(__dirname, '../index.html'));
 });
 
@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
 //   console.log('here in sendfile /build')
 //   return res.sendFile(path.resolve(__dirname, '../build/build.js'));
 // });
+app.get('/favicon.ico', (req, res) => (
+  res.status(200)
+));
+
 
 app.use('/universe', universeRouter);
 app.use('/drinks', drinksRouter);
