@@ -1,5 +1,8 @@
 @import '_variables';
 
 .cocktail-card-deck {
-  border: 3px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  padding-top: 10em;
 }

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -9,6 +10,7 @@ module.exports = {
     filename: 'build.js',
   },
   plugins: [
+    new NodePolyfillPlugin(),
     new HtmlWebpackPlugin({
       title: 'dev server app',
       template: 'index.html',
@@ -19,12 +21,12 @@ module.exports = {
       directory: 'index.html',
     },
     port: 8080,
-        open: true,
-        hot: true,
-        compress: true,
-        historyApiFallback: true,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
     proxy: {
-      '/api': {
+      '/api/**': {
         target: 'http://localhost:3000/',
       },
     },
@@ -32,15 +34,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx|\.js/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: ['@babel/proposal-class-properties'],
         },
       },
       {
-        test: /\.css|\.scss|\.sass/gi,
+        test: /\.s(c|a)ss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
@@ -58,5 +61,3 @@ module.exports = {
     ],
   },
 };
-
-

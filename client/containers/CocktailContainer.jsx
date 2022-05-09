@@ -1,27 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import CocktailCardDeck from '../components/CocktailCardDeck.jsx';
+import React, { useEffect, useState } from "react";
+import CocktailCardDeck from "../components/CocktailCardDeck.jsx";
 
-const data = [
-  {name: 'Daquiri', flavor: 'citrus', glassware: 'coupe'}, 
-  {name: 'Old Fashioned', flavor: 'Boozy', glassware: 'Highball'}, 
-  {name: 'Martini', flavor: 'Boozy', glassware: 'Nick and Nora'}, 
-]
+/**
+ * Stateful component that holds list of cocktails. Currently, set to all possible cocktails, in the future
+ * should have a flag that makes one of two requests to the server.
+ * 1. List of all cocktails
+ * 2. List of possible cocktails based on user's bar inventory
+ */
 
 export default function CocktailContainer() {
-  // React hooks creating state
-  // Destructure an array passing in parameter as first, new parameter is second with set keyword = useState(beginning state)
-  const [cocktailList, setCocktailList] = useState([])
-
-  useEffect(() => { 
-    setCocktailList((prevState) => {
-      return [...cocktailList, ...data]
-    })
+  const [cocktailList, setCocktailList] = useState([]);
+  useEffect(() => {
+    const getCocktailData = async () => {
+      const request = await fetch("api/universe/drinks");
+      const drinks = await request.json();
+      setCocktailList([...drinks.drinks]);
+    };
+    getCocktailData().catch(console.error);
   }, []);
 
-  
   return (
-    <div className='cocktail-container'>
+    <div className="cocktail-container">
       <CocktailCardDeck cocktailList={cocktailList} />
     </div>
-  )
+  );
 }
