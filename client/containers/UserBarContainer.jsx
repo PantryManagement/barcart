@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import UserBarCardDeck from "../components/UserBarCardDeck.jsx";
 
+
 /**
- * Stores user inventory of ingredients. Has list of items (such as limes, etc) in addition to exact oz amounts of remaining
+ * Stores user inventory of ingredients. Has list of items (such as limes, etc) in addition to exact oz amount of remaining
  * bottles. Should eventually dynamically update when the user makes a drink based on the recipe amounts used.
  *
  * For now, inventory is just a column on total ingredient table (aka will be marked 0 if user does not have ingreident,
- * otherwise will show ammount.)
+ * otherwise will show amount).
  *
  * IMPORTANT: All bottles are stored at a rounded oz amount to 25oz to make ml/oz conversion simpler
  */

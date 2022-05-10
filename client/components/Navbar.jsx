@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, Router } from "react-router-dom";
-
 import styles from "../scss/navbar.scss";
 
+
 /**
- * Routes users to different pages based on link clicked, including homepage for clicking the app name (barcart)
+ * Routes users to different pages based on the link clicked including homepage for clicking the app name (barcart).
  */
 export default function Navbar() {
   return (

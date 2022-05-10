@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../scss/cocktailcard.scss";
 
+
 /**
  * Displays cocktail information. Should eventually be set up to store recipe info too.
  */
