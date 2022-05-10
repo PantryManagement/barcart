@@ -1,5 +1,27 @@
 # main
+Stores a list of cocktail recipes, a list of user inventory, and returns a filtered list of cocktails.
 
+Additionally has user inventory functionality, and all cocktail functionality.
+
+## Structure
+## React Component Tree
+<img src="./assets/Tassled Wobbegong-React Component Tree.drawio.png" height="600px"><br>
+
+## UI Diagram
+<img src="./assets/Tassled Wobbegong-UI Diagram.drawio.png" height="600px"><br>
+
+## Current Functionality
+1) Shopping List: Displays nothing
+2) Cocktails: Displays list of entire cocktails
+3) User Bar: Displays names and amounts of all user items. Items with a count of 0 are excluded.
+
+## Future Functionality
+1) Implement Shopping List: Should be able to easily add more ingredients by button or typing, or add all ingredients in a cocktail by a button.
+2) Connect to back-end to show filtered cocktail list: Back-end has functionality to show all possible user drinks ('api/drinks/'), just need a flag to switch api call in cocktail container.
+3) Displaying recipe on cocktail front end, and adding the recipe to the schema
+4) Currently, liquor is unnamed. Could add a "name" column, allowing for multiple kinds of vodka, for example
+
+# future data entry
 LIST OF FUTURE COCKTAILS/RECIPES TO ADD
 
 Sidecar
