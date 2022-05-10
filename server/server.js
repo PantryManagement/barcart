@@ -20,7 +20,7 @@ app.get('/build.js', (req, res) => {
 });
 
 
-
+// no favicon implement, just added to end an annoying error.
 app.get('/favicon.ico', (req, res) => (
   res.status(200)
 ));

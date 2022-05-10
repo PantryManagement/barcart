@@ -2,8 +2,9 @@ import React from "react";
 import CocktailCard from "./CocktailCard.jsx";
 import styles from "../scss/cocktaildeck.scss";
 
+
 /**
- * Simply renders list of cocktails as cards
+ * Renders list of cocktails as cards.
  */
 export default function CocktailCardDeck(props) {
   console.log("props", props);

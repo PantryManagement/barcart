@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "../scss/userbarcard.scss";
 
+/**
+ * Displays personal user bar inventory information.
+ */
 export default function UserBarCard(props) {
   return (
     <div className="user-bar-card">

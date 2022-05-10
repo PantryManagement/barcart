@@ -1,8 +1,10 @@
 import React from "react";
 import UserBarCard from "./UserBarCard.jsx";
 import styles from "../scss/userbardeck.scss";
+
+
 /**
- * Simply renders list of user inventory. Will exclude all inventory of "0"
+ * Renders list of user inventory. Will filter all inventory with 0 in stock.
  */
 export default function UserBarCardDeck(props) {
   
