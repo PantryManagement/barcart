@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   mode: process.env.NODE_ENV,
@@ -9,6 +10,7 @@ module.exports = {
     filename: 'build.js',
   },
   plugins: [
+    new NodePolyfillPlugin(),
     new HtmlWebpackPlugin({
       title: 'dev server app',
       template: 'index.html',
