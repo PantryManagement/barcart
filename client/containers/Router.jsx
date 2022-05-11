@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.jsx";
 import ShoppingListContainer from "./ShoppingListContainer.jsx";
 import CocktailContainer from "./CocktailContainer.jsx";
 import UserBarContainer from "./UserBarContainer.jsx";
+import SignIn from "../components/Login.jsx";
 
 
 /**
@@ -15,10 +16,11 @@ export default function Router() {
     <div className="router">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="listPlaceholder" element={<ShoppingListContainer />} />
-          <Route path="cocktails" element={<CocktailContainer />} />
-          <Route path="userbar" element={<UserBarContainer />} />
+        <Routes> 
+          <Route path="/signIn" element={<SignIn />}/>
+          <Route path="/listPlaceholder" element={<ShoppingListContainer />} />
+          <Route path="/cocktails" element={<CocktailContainer />} />
+          <Route path="/userbar" element={<UserBarContainer />} />
         </Routes>
       </BrowserRouter>
     </div>
